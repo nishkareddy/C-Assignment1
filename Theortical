@@ -1,0 +1,109 @@
+C# Assignment-I
+
+1.	What type would you choose for the following “numbers”?
+A person’s telephone number -  long
+A person’s height -  double
+A person’s age - int
+A person’s gender (Male, Female, Prefer Not To Answer) - String
+A person’s salary – int or decimal
+A book’s ISBN - int
+A book’s price - decimal
+A book’s shipping weight - float
+A country’s population - long
+The number of stars in the universe - long
+The number of employees in each of the small or medium businesses in the
+United Kingdom (up to about 50,000 employees per business) – double
+
+2.	What are the difference between value type and reference type variables? What is
+boxing and unboxing?
+
+Value Type vs Reference type
+-	Value type are stored in stack memory whereas Reference types are stored in heap memory.
+-	Value type cannot contain NULL values but reference type can.
+-	Value type include int, string and reference type include class, array, delegate.
+-	Value type directly contain their data whereas reference stores references to data.
+-	Value type- each has its own copy of its data; Two reference variables can reference the same object.
+-	Value type- Operation on one cannot affect another; Reference- Operation on one can affect another.
+Boxing vs Unboxing:-
+-	Boxing refers to the conversion of value type to reference type. This involves creating a new object on the heap and copying the new value into the new object. Unboxing refers to the conversion of reference type to value type. This operation involves explicitly extracting the value type from the object.
+-	Boxing involves creating a new object on the heap, which can be a costly operation in terms of performance, especially in tight loops or high-frequency calls. Unboxing requires type-checking and then copying the value back to the stack, which also incurs performance costs.
+
+
+3.	What is meant by the terms managed resource and unmanaged resource in .NET.
+Managed resources are those that are under the direct control of the .NET runtime's garbage collector (GC). These 
+resources are typically instances of classes or objects that you create using new or through framework methods within 
+your .NET application.
+
+Unmanaged resources are those not managed by the .NET garbage collector. These include resources such as file handles, 
+network connections, database connections, and pointers to memory allocated outside the .NET environment using 
+platform invocation services.
+
+4.Whats the purpose of Garbage Collector in .NET?
+In the common language runtime (CLR), the garbage collector (GC) serves as an automatic memory manager. 
+The garbage collector manages the allocation and release of memory for an application. 
+Therefore, developers working with managed code don't have to write code to perform memory management tasks. 
+Automatic memory management can eliminate common problems such as forgetting to free an object and causing a memory 
+leak or attempting to access freed memory for an object that's already been freed.
+
+
+
+
+
+
+
+
+
+Test your Knowledge
+1. What happens when you divide an int variable by 0? 
+Ans- It results in a DivdeByZeroException.
+
+2. What happens when you divide a double variable by 0?
+When a double variable is divided by zero there are 2 condtions which arise:
+a. If a positive double variable is divided by 0 then it results in positive inifinity.
+b.If a negative double variable is divided by 0 then it results in negative inifinity.
+  
+3. What happens when you overflow an int variable, that is, set it to a value beyond its
+range?
+If an overflow occurs the overflow will not cause an exception. 
+Instead, the value will wrap around to the opposite end of the range.
+
+
+4. What is the difference between x = y++; and x = ++y;?
+x = y++ ->Operation: This is known as the post-increment operator. The value of y is assigned to x first, and then
+y is incremented by 1.
+x= ++y ->Operation: This is known as the pre-increment operator. y is incremented by 1 first, and then the new value 
+of y is assigned to x.
+
+5. What is the difference between break, continue, and return when used inside a loop
+statement?
+Break vs continue vs return:
+- break is used within loops or switch statements; continue->loops; return->functions, loops
+-basic functionality of break : Immediately exits the loop or switch statement in which it appears. After a break statement 
+executes, the control of the program moves to the statement immediately following the loop or switch.
+-basic functionality of continue: Used to skip certain iterations within the loop based on a specific condition.
+-basic functionality of return: Used to send a value back to the function caller or to terminate the execution of a
+ function based on a condition.
+
+6. What are the three parts of a for statement and which of them are required?
+The for statement executes a statement or a block of statements while a specified Boolean expression evaluates to true. 
+a. The initializer section that is executed only once, before entering the loop.
+b.The condition section that determines if the next iteration in the loop should be executed. If it evaluates to true or
+ isn't present, the next iteration is executed; otherwise, the loop is exited.
+c.The condition section must be a Boolean expression.
+
+7. What is the difference between the = and == operators?
+The = is used to assign values to a variable whereas == is an equality operator which is used to compare two values.
+
+8. Does the following statement compile? for ( ; true; ) ;
+Yes, the statement for ( ; true; ) ; will indeed compile
+The statement is an infinite loop with no initialization or update expressions, and a constantly true condition, resulting 
+in the loop running indefinitely without performing any operations each iteration.
+
+9. What does the underscore _ represent in a switch expression?
+ the '_' used in a switch expression acts as a discard or wildcard pattern. It is a way to specify a default case when none of
+ the other specified patterns match the input. 
+ 
+10. What interface must an object implement to be enumerated over by using the foreach
+statement.
+The IEnumerator interface provides iteration over a collection-type object in a class. 
+The IEnumerable interface permits enumeration by using a foreach loop.
